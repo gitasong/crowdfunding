@@ -1,0 +1,17 @@
+{ "projects": [{
+  "title": "Iron Swimming Suit",
+  "owner": "Big Johny Wilkins",
+  "description": "Defintley not for swimming",
+  "goal": 20000
+}, {
+  "title": "Rubber Wrench",
+  "owner": "Bill Jennings",
+  "description": "It's a wrench...but it's rubber",
+  "goal": 55000
+}, {
+  "title": "Lava Hat",
+  "owner": "Sarah Domeless",
+  "description": "Hat made of lava. Will keep your head warm during the winter",
+  "goal": 5
+  }]
+}

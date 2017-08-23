@@ -1,27 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Project } from '../project.model';
 import { Router } from '@angular/router';
+import { ProjectService } from '../project.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.css'],
+  providers: [ProjectService]
 })
-export class ProjectComponent implements OnInit {
 
-  constructor(private router: Router) { }
+export class ProjectComponent implements OnInit {
+  projects: FirebaseListObservable<any[]>;
+
+  constructor(private router: Router, private projectService: ProjectService) { }
 
   ngOnInit() {
+    this.projects = this.projectService.getProjects();
   }
-  projects: Project[] = [
-    new Project("The Manual Cocktail Collection", "Craighton Berman", "Elevate your home cocktail experience with a sculptural set of frosted decanters that feature an integrated dosing jigger.", 75000, 1),
-    new Project("Kaksori!", "Solano Film Collective", "A feature documentary film about the traveling musicians of rural South Korea.", 15000, 2),
-    new Project("Pocket Popcorn Machine", "THE Dylan Lewis", "Make some delicious popcorn in your pocket it's sooooo easy", 20000, 3),
-    new Project("Ten Thousand foot slip n slide", "Dylan lewis again", "Literally slide to inifnity", 30000, 4)
-  ];
 
-  goToDetailPage(clickedProject: Project) {
-  this.router.navigate(['projects', clickedProject.id]);
-};
+
+  goToDetailPage(clickedProject) {
+  this.router.navigate(['projects', clickedProject.$key]);
+}
 
 }

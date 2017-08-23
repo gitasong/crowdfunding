@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add a new Project to our catalog!</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Project Title:</label>
+      <br>
+      <input #newTitle>
+    </div>
+
+    <div>
+      <label>Project Owner:</label>
+      <br>
+      <input #newOwner>
+    </div>
+
+    <div>
+      <label>Project Description:</label>
+      <br>
+      <input #newDescription>
+    </div>
+
+    <div>
+      <label>Project goal:</label>
+      <br>
+      <input #newGoal>
+    </div>
+    <button (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newGoal.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+  </div>
+</div>
