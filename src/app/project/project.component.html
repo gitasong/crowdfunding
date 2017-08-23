@@ -1,0 +1,9 @@
+<h2>Project Catelog</h2>
+
+<div *ngFor="let project of projects" (click)="goToDetailPage(project)" class="panel panel-default">
+  <div class="panel-body">
+    <h3><em>{{project.title}}</em> by {{project.owner}}</h3>
+    <h5>{{project.description}}</h5>
+    <h3>{{project.goal}}</h3>
+  </div>
+</div>
