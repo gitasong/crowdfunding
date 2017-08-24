@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Project } from './project.model';
 
 @Pipe({
-  name: 'goal'
+  name: 'goal',
+  pure: false
 })
 export class GoalPipe implements PipeTransform {
 
