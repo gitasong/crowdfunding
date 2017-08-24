@@ -12,8 +12,17 @@
 <input [(ngModel)]="selectedProject.description">
 <br>
 
+<label>New Project Mission:</label>
+<input [(ngModel)]="selectedProject.mission">
+<br>
+
 <label>New Project Goal:</label>
 <input [(ngModel)]="selectedProject.goal">
+<br>
+
+<label>New Project Rewards:</label>
+<input [(ngModel)]="selectedProject.rewards">
+<br>
 
 <button (click)="beginUpdatingProject(selectedProject)">Update</button>
 <hr>
