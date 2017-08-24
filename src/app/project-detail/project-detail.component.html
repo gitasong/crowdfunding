@@ -1,19 +1,20 @@
 <div>
-  <h3>{{(projectToDisplay | async).title}}</h3>
+  <!-- <h3>{{(projectToDisplay | async).title}}</h3>
   <h4>{{(projectToDisplay | async).owner}}</h4>
   <p>{{(projectToDisplay | async).description}}</p>
   <p><em>{{(projectToDisplay | async ).mission}}</em></p>
-  <h4>${{(projectToDisplay | async).goal}}</h4>
-  <!-- <ul>
-    <li *ngFor="let reward of projectToDisplay.rewards | async">{{projectToDisplay.reward}}</li>
-  </ul> -->
-  <h4>${{(projectToDisplay | async).rewards}}</h4>
+  <h4>${{(projectToDisplay | async).goal}}</h4>  -->
+  <ul>
+    <!-- <li>test</li> -->
+    <li *ngFor="let reward of rewards">test</li>
+  </ul>
+  <!-- <h4>${{(projectToDisplay | async).rewards}}</h4> -->
 </div>
 
-<div>
+<!-- <div>
   <div>
     <label>Amount to Fund:</label>
     <input #newFunding>
   </div>
   <button (click)="submitFunding(newFunding.value); newFunding.value=''">Fund This Project!</button>
-</div>
+</div> -->
