@@ -30,7 +30,8 @@ export class ProjectDetailComponent implements OnInit {
    }
 
    submitFunding(funding: number) {
-     console.log("Your project is now at $" + funding);
+     this.projectToDisplay.funding += funding;
+     console.log(this.projectToDisplay.funding);
    }
 
 }
