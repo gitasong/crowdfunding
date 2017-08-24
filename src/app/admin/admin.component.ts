@@ -9,7 +9,7 @@ import { Project } from '../project.model';
   providers: [ProjectService]
 })
 export class AdminComponent implements OnInit {
-  doneAdding: boolean = null;
+  doneAdding: boolean = false;
   rewards: string[] = [];
 
   constructor(private projectService: ProjectService) { }
