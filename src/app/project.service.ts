@@ -37,8 +37,7 @@ export class ProjectService {
     projectEntryInFirebase.remove();
   }
 
-  updateFunding(currentProject){
-    var projectEntryInFirebase = this.getProjectById(currentProject.$key);
-    projectEntryInFirebase.update({funding: currentProject.funding});
+  updateFunding(projectToDisplay, newFunding){
+    projectToDisplay.update({funding: newFunding});
   }
 }
