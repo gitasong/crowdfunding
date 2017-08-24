@@ -27,7 +27,9 @@ export class ProjectService {
     projectEntryInFirebase.update({title: localUpdatedProject.title,
                                 owner: localUpdatedProject.owner,
                                 description: localUpdatedProject.description,
-                                goal: localUpdatedProject.goal});
+                                mission: localUpdatedProject.mission,
+                                goal: localUpdatedProject.goal,
+                                rewards: localUpdatedProject.rewards});
   }
 
   deleteProject(localProjectToDelete){
