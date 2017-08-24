@@ -1,6 +1,6 @@
 <h2>Project Catalog</h2>
 
-<select>
+<select (change)+"onChange($event.target.value)">
   <option value="allProjects" selected="selected">All Projects</option>
   <option value="under2500">Projects Under $2500</option>
   <option value="under10000">Projects $2500–10,000</option>
