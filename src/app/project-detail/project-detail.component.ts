@@ -14,7 +14,7 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 export class ProjectDetailComponent implements OnInit {
   projectToDisplay;
   projectId: string;
-  rewards;
+  rewards: string[];
 
   constructor(
     private route: ActivatedRoute, private location: Location, private projectService: ProjectService) { }
@@ -23,9 +23,10 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
        this.projectId = urlParameters['id'];
      });
-    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
-    this.rewards = this.projectToDisplay.rewards;
-    console.log(this.projectToDisplay.title);
+    this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
+      this.projectToDisplay = dataLastEmittedFromObserver;
+      var rewards = this.projectToDisplay.rewards;
+    })
    }
 
    submitFunding(funding: number) {
