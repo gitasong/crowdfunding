@@ -5,7 +5,11 @@
     <h3 (click)="goToDetailPage(project)"><em>{{project.title}}</em> by {{project.owner}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       <h5>{{project.description}}</h5>
+      <p><em>{{(projectToDisplay | async ).mission}}</em></p>
       <h3>{{project.goal}}</h3>
+      <ul>
+        <li *ngFor="let reward of projectToDisplay.rewards | async">{{(projectToDisplay | async).rewards}}</li>
+      </ul>
       <hr>
       <app-edit-project [selectedProject]="project"></app-edit-project>
     </div>
