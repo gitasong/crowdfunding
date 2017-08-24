@@ -9,10 +9,17 @@ import { Project } from '../project.model';
   providers: [ProjectService]
 })
 export class AdminComponent implements OnInit {
+  doneAdding: boolean = null;
+  rewards: string[] = [];
 
   constructor(private projectService: ProjectService) { }
 
   ngOnInit() {
+  }
+
+  submitReward(reward: string) {
+    this.rewards.push(reward);
+    console.log(this.rewards);
   }
 
   submitForm(title: string, owner: string, description: string, mission: string, goal: number, rewards: string[]) {
