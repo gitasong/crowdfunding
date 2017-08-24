@@ -33,13 +33,21 @@
       <input #newGoal>
     </div>
 
-    <div>
+    <!-- <div>
       <label>Project Rewards:</label>
       <br>
       <input #newRewards>
+    </div> -->
+
+    <div>
+      <label>Add A Reward:</label>
+      <br>
+      <input #newReward>
     </div>
 
-    <button (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newMission.value, newGoal.value, newRewards.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newMission.value=''; newGoal.value=''; newRewards.value=''">Add</button>
+    <button (click)="submitReward(newReward.value); newReward.value=''">Add Reward</button>
+
+    <!-- <button (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newMission.value, newGoal.value, newRewards.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newMission.value=''; newGoal.value=''; newRewards.value=''">Add</button> -->
   </div>
 </div>
 
