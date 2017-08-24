@@ -1,8 +1,8 @@
 <h2>Project Catalog</h2>
 
-<div *ngFor="let project of projects | async" (click)="goToDetailPage(project)" class="panel panel-default">
+<div *ngFor="let project of projects | async" class="panel panel-default">
   <div class="panel-body">
-    <h3><em>{{project.title}}</em> by {{project.owner}}</h3>
+    <h3 (click)="goToDetailPage(project)"><em>{{project.title}}</em> by {{project.owner}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       <h5>{{project.description}}</h5>
       <h3>{{project.goal}}</h3>
