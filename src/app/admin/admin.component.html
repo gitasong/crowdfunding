@@ -22,11 +22,24 @@
     </div>
 
     <div>
-      <label>Project goal:</label>
+      <label>Project Mission:</label>
+      <br>
+      <input #newMission>
+    </div>
+
+    <div>
+      <label>Project Goal:</label>
       <br>
       <input #newGoal>
     </div>
-    <button (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newGoal.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newGoal.value=''">Add</button>
+
+    <div>
+      <label>Project Rewards:</label>
+      <br>
+      <input #newRewards>
+    </div>
+
+    <button (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newMission.value, newGoal.value, newRewards.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newMission.value=''; newGoal.value=''; newRewards.value=''">Add</button>
   </div>
 </div>
 
