@@ -5,10 +5,8 @@
   <p><em>{{projectToDisplay.mission}}</em></p>
   <h4>${{projectToDisplay.goal}}</h4>
   <ul>
-    <!-- <li>test</li> -->
-    <li *ngFor="let reward of rewards">test</li>
+    <li *ngFor="let reward of projectToDisplay.rewards">{{reward}}</li>
   </ul>
-  <!-- <h4>${{projectToDisplay.rewards}}</h4> -->
 </div>
 
 <!-- <div>
