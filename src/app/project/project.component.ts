@@ -23,9 +23,12 @@ export class ProjectComponent implements OnInit {
 
   }
 
-
   goToDetailPage(clickedProject) {
-  this.router.navigate(['projects', clickedProject.$key]);
-}
+    this.router.navigate(['projects', clickedProject.$key]);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByGoal = optionFromMenu;
+  }
 
 }
