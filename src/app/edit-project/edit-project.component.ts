@@ -15,4 +15,8 @@ export class EditProjectComponent implements OnInit {
   ngOnInit() {
   }
 
+  beginUpdatingProject(projectToUpdate){
+    this.projectService.updateProject(projectToUpdate);
+  }
+
 }
