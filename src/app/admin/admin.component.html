@@ -48,7 +48,7 @@
     <button (click)="submitReward(newReward.value); newReward.value=''">Add Reward</button>
     <button (click)="isDone()">Done Adding</button>
 
-    <button [class]="changeClass(doneAdding)" (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newMission.value, newGoal.value, newRewards.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newMission.value=''; newGoal.value=''; newRewards.value=''">Add</button>
+    <button *ngIf="doneAdding" (click)="submitForm(newTitle.value, newOwner.value, newDescription.value, newMission.value, newGoal.value); newTitle.value=''; newOwner.value=''; newDescription.value=''; newMission.value=''; newGoal.value=''">Add New Project</button>
   </div>
 </div>
 
