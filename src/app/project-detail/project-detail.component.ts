@@ -23,15 +23,17 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
        this.projectId = urlParameters['id'];
      });
-    this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
-      this.projectToDisplay = dataLastEmittedFromObserver;
-      var rewards = this.projectToDisplay.rewards;
-    })
+    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+    // .subscribe(dataLastEmittedFromObserver => {
+    //   this.projectToDisplay = dataLastEmittedFromObserver;
+      // var rewards = this.projectToDisplay.rewards;
+    // })
    }
 
-   submitFunding(funding: number) {
-     this.projectToDisplay.funding += funding;
-     console.log(this.projectToDisplay.funding);
+   submitFunding(newFunding: string, currentFunding: string) {
+     var updatedFunding = parseInt(newFunding) + parseInt(currentFunding);
+     this.projectService.updateFunding(this.projectToDisplay, updatedFunding);
+     console.log(updatedFunding);
    }
 
 }
