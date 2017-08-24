@@ -22,6 +22,10 @@ export class AdminComponent implements OnInit {
     console.log(this.rewards);
   }
 
+  isDone() {
+    this.doneAdding = true;
+  }
+
   submitForm(title: string, owner: string, description: string, mission: string, goal: number, rewards: string[]) {
     const newProject: Project = new Project(title, owner, description, mission, goal, rewards);
     this.projectService.addProject(newProject);
