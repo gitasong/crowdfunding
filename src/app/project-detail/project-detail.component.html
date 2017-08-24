@@ -1,14 +1,14 @@
 <div>
-  <!-- <h3>{{(projectToDisplay | async).title}}</h3>
-  <h4>{{(projectToDisplay | async).owner}}</h4>
-  <p>{{(projectToDisplay | async).description}}</p>
-  <p><em>{{(projectToDisplay | async ).mission}}</em></p>
-  <h4>${{(projectToDisplay | async).goal}}</h4>  -->
+  <h3>{{projectToDisplay.title}}</h3>
+  <h4>{{projectToDisplay.owner}}</h4>
+  <p>{{projectToDisplay.description}}</p>
+  <p><em>{{projectToDisplay.mission}}</em></p>
+  <h4>${{projectToDisplay.goal}}</h4>
   <ul>
     <!-- <li>test</li> -->
     <li *ngFor="let reward of rewards">test</li>
   </ul>
-  <!-- <h4>${{(projectToDisplay | async).rewards}}</h4> -->
+  <!-- <h4>${{projectToDisplay.rewards}}</h4> -->
 </div>
 
 <!-- <div>
