@@ -14,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class ProjectComponent implements OnInit {
   projects: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByGoal: string = "allProjects";
 
   constructor(private router: Router, private projectService: ProjectService) { }
 
