@@ -18,8 +18,15 @@ export class ProjectService {
     this.projects.push(newProject);
   }
 
-
   getProjectById(projectId: string) {
     return this.database.object('projects/' + projectId);
+  }
+
+  updateProject(localUpdatedProject){
+    var projectEntryInFirebase = this.getProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({title: localUpdatedProject.title,
+                                owner: localUpdatedProject.owner,
+                                description: localUpdatedProject.description,
+                                goal: localUpdatedProject.goal});
   }
 }
