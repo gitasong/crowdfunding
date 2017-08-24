@@ -4,6 +4,7 @@
   <p>{{(projectToDisplay | async).description}}</p>
   <p><em>{{(projectToDisplay | async).mission}}</em></p>
   <h4>${{(projectToDisplay | async).goal}}</h4>
+  <h4>${{(projectToDisplay | async).funding}}</h4>
   <ul>
     <li *ngFor="let reward of (projectToDisplay | async).rewards">{{reward}}</li>
   </ul>
