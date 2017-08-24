@@ -3,7 +3,7 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/kerrbrittany9/crowdfunding",
   "ignore": [
     "**/.*",
     "node_modules",
