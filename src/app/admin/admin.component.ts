@@ -19,7 +19,6 @@ export class AdminComponent implements OnInit {
 
   submitReward(reward: string) {
     this.rewards.push(reward);
-    console.log(this.rewards);
   }
 
   isDone() {
@@ -27,6 +26,7 @@ export class AdminComponent implements OnInit {
   }
 
   submitForm(title: string, owner: string, description: string, mission: string, goal: number, rewards: string[]) {
+    var rewards = this.rewards
     const newProject: Project = new Project(title, owner, description, mission, goal, rewards);
     this.projectService.addProject(newProject);
   }
